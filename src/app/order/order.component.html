@@ -1,0 +1,54 @@
+<app-nav-order></app-nav-order>
+<div class="container p-0 height-after">
+  <mat-card class="matCardRequest p-0 mt-4">
+    <div class="row">
+      <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12 p-0 desktop-and-tablet">
+<!--        <div class="row mt-4">-->
+<!--          <div class="col-12">-->
+<!--            <h6 align="center" style="opacity:0.9">Choose your Bako model</h6>-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="preorderFrame">
+          <div class="preorderFrameRow">
+            <img class="orderImage" src="../../assets/imgs/rendering/bakoPreorder.png" alt="preOrder bako motors">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 p-0 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="col-12">
+            <h5 class="mt-4 uppercase" align="center">PreOrder</h5>
+            <div class="col-12 mt-3 d-flex justify-content-center"><div class="lineForm"></div></div>
+          </div>
+        </div>
+        
+        <form [formGroup]="form" class="mt-3">
+          <div class="col-12 d-flex justify-content-center">
+            <div class="faqInput d-flex align-items-center"><font color="silver">Version*:</font>
+              <input formControlName="model" name="model" class="marginLeftRadio" id="bakoB10" value="b10" type="radio">&nbsp;<label for="bakoB10">Bako B10</label>
+              <input formControlName="model" name="model" class="marginLeftRadio" id="bakoB15" value="b15" type="radio">&nbsp;<label for="bakoB15">Bako B15</label>
+              <input formControlName="model" name="model" class="marginLeftRadio" id="bakoB20" value="b20" type="radio">&nbsp;<label for="bakoB20">Bako B20</label>
+            </div>
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <input autocomplete="off" formControlName="username" name="username" class="faqInput" type="text" placeholder="Your name*...">
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <input autocomplete="off" formControlName="email" name="email" class="faqInput" type="email" placeholder="Enter your email*...">
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <textarea autocomplete="off" formControlName="comment" name="comment" class="commentArea" placeholder="Add a comment..."></textarea>
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <button (click)="sendCommande()" [disabled]="form.invalid" class="sendBtn hvr-hang d-flex align-items-center justify-content-center"><i class="ri-shopping-cart-fill ri-lg"></i>&nbsp;&nbsp;PreOrder</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<footer class="backgroundGris footerMonte">
+  <app-footer></app-footer>
+</footer>
