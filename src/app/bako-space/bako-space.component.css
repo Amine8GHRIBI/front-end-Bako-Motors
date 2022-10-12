@@ -258,6 +258,12 @@ opacity:0.4;
   .heightImg{
     height:25vh !important;
   }
+
+  .heightImgtop{
+    height:25vh !important;
+    width:87%;
+    margin-left: 20%px;
+  }
   
   .backgroundRow{
   width:100%;
